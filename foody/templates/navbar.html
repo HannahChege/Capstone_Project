@@ -1,17 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<nav class="navbar navbar-expand-lg " style="background-color:white;">
+  <a class="navbar-brand" href="#" style="color:black;">FOOD WEBSITE</a> 
+  <img src="static/image/food2.png" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<nav class="navbar navbar-inverse  navbar-dark bg-dark">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="">FOOD WEBSITE</a>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <div class="container-fluid">
+      <div class="col-sm-4 col-md-4">
+        {% if user.is_authenticated %}
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Account
+                      <span class="caret"></span>
+                  </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="" >Home</a>
+              </li>
+              <li>
+                <a href="/accounts/password/change">Change Password</a>
+              </li>
+              <li>
+                <a href="/logout">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        {% else %}
+        <li>
+          <a href="/accounts/login"   style="margin-left:150px; color:white;" ; class="btn btn-primary">LOGIN /SIGNUP </a>
+        </li>
+  
+        {% endif %}
+      </div>
     </div>
+    <form class="form-inline my-1 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="&#xF002;  Search" name="username" style="font-family:FontAwesome;text-align:center;">
+     
+    </form>
   </div>
 </nav>
-</body>
-</html>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+ body{
+ background-color:black;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ height: 150px;
+  
+ }
+ .nav{
+background-color: #581845;
+
+ }
+  }
+  @font-face {
+    font-family: billabong;
+    src: url('/static/fonts/Billabong.ttf');
+    font-weight: bold;
+  }
+</style>
