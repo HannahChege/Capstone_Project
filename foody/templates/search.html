@@ -1,0 +1,25 @@
+{%extends 'all-news/base.html'%} 
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    {% if foods%}
+      <h2>Found {{ foods|length }} of searched term {{message}}</h2>
+    {% else %}
+      <h2> Found 0 foods for the search term {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+
+  {% if foods %}
+    {% for food in foods%}
+      <div class="col-sm-6 col-md-3">
+          <h1>{{food.title}}</h1>
+      </div>
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>
+{% endblock %}
