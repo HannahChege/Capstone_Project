@@ -4,86 +4,15 @@
 {% load static%}
 
 {% block content %}
-        <div class="row">
-            <div class="col-md-3">
-                <img src="static/image/Beef.jpg" width="400px" height="265px">
 
-            </div>
-                <div class="col-md-3">
-                        <img src="static/image/bhajia.jpg" width="400px">
-                </div>
-                <div class="col-md-3">
-                        <img src="static/image/pilau.jpg" width="400px">
-                </div>
-                <div class="col-md-3">
-                <img src="static/image/githeri.jpg" width="350px" height="265px">
-            </div>
+{% for photo_item in images %}
+<div class="row">
+    <div class="col-md-6">
+      <img src="{{photo_item.image.url}}"   style="width:300px; height:265px;" >
+    </div>   
+</div>  
+  {% endfor %}  
 
-        </div>
-        <div class="row">
-                <div class="col-md-3">
-                    <img src="static/image/bunburger.jpg" width="350px" height="265px">
-    
-                </div>
-                    <div class="col-md-3">
-                            <img src="static/image/cabbage.jpg" width="350px" height="265px">
-                    </div>
-                    <div class="col-md-3">
-                            <img src="static/image/chicken1.jpg" width="400px" height="265px">
-                    </div>
-                    <div class="col-md-3">
-                    <img src="static/image/chickengrilled.jpg" width="350px" height="265px">
-                </div>
-    
-            </div>   
-            <div class="row">
-                    <div class="col-md-3">
-                        <img src="static/image/chickenroastsoupfood.jpg" width="400px" height="265px">
-        
-                    </div>
-                        <div class="col-md-3">
-                                <img src="static/image/dinner.jpg" width="400px" height="265px"> 
-                        </div>
-                        <div class="col-md-3">
-                                <img src="static/image/fishherbsslices.jpg" width="400px" height="265px">
-                        </div>
-                        <div class="col-md-3">
-                        <img src="static/image/frenchfries.jpg" width="350px" height="265px">
-                    </div>
-        
-                </div>  
-                <div class="row">
-                        <div class="col-md-3">
-                            <img src="static/image/frenchfriesgreens.jpg" width="400px" height="265px">
-            
-                        </div>
-                            <div class="col-md-3">
-                                    <img src="static/image/friedonion.jpg" width="400px" height="265px">
-                            </div>
-                            <div class="col-md-3">
-                                    <img src="static/image/noodles.jpg" width="400px" height="265px">
-                            </div>
-                            <div class="col-md-3">
-                            <img src="static/image/frenchfries.jpg" width="350px" height="265px">
-                        </div>
-            
-                    </div>  
-                    <div class="row">
-                            <div class="col-md-3">
-                                <img src="static/image/meatbeefvegetablessauce.jpg" width="400px" height="265px">
-                
-                            </div>
-                                <div class="col-md-3">
-                                        <img src="static/image/meatdinnersauce.jpg" width="400px" height="265px">
-                                </div>
-                                <div class="col-md-3">
-                                        <img src="static/image/otaton.jpg" width="400px" height="265px">
-                                </div>
-                                <div class="col-md-3">
-                                <img src="static/image/potatoesbeeflettuce.jpg" width="350px" height="265px">
-                            </div>
-                
-                        </div>     
 <style> 
 
 .img{
