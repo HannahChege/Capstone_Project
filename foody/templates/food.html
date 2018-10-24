@@ -3,4 +3,48 @@
 {% load bootstrap4 %}
 {% load static%}
 
-<h1>Wellcome to food website</h1>
+{% block content %}
+<div class="landingpage">
+<img src="static/image/download.png" class="img" alt="logoBig" width="100px">
+</div>
+<style>
+ <div class="row">
+    <div class="col-md-3 happyhour">
+      <div class="leo" style="padding:30px;">
+        <h2 id="text1">Happy Hour</h2>
+      </div>
+      <div class="Hour" style="padding:30px;">
+        <h2 id="text2">Party time</h2>
+      </div>
+    </div>
+    <div class="col-md-3 happyhour breakfast">
+      <img src="img/foodtop/breakfast.jpg">
+      <p id="imgtext">Breakfast</p>
+    </div>
+    <div class="col-md-3 happyhour lunch">
+      <img src="img/foodtop/lunch.jpg">
+      <p id="imgtext">Lunch</p>
+    </div>
+    <div class="col-md-3 happyhour dinner">
+      <img src="img/foodtop/dinner.jpg">
+      <p id="imgtext">Dinner</p>
+    </div>
+  </div>   
+.img{
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+border-radius: 10px;
+width: 100% !important;
+}
+.img:hover{
+box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+opacity: 0.7;
+overflow: hidden;
+transition: .5s ease;
+transform: translateY(-7px);
+        }
+      </style>
+{% endblock %}
+
+
