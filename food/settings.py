@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     'bootstrap3',
     'bootstrap4',
     'django.contrib.gis',
+    'djgeojson',
+    'leaflet',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +121,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# LEAFLET_CONFIG= {
+#     'DEFAULT_ZOOM': 12
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
