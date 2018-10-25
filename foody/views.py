@@ -10,10 +10,26 @@ from .tokens import account_activation_token
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
+from .models import food,Restaurant
+from django.contrib.gis.geos import fromstr
+from django.contrib.gis.geos import Point
+from django.contrib.gis.measure import D
+from random import choice
+
+
 # Create your views here.
 def foody (request):
-    return render(request,'food.html')
+    foods = food.objects.all()
+    for fod in foods:
+        fod.un = ''.join(choice('atrdsuhfdsefreh') for _ in range(10))
+    return render(request,'food.html',{'foods':foods})
 
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"image.html", {"image":image})
 def search_results(request):
 
     if 'food' in request.GET and request.GET["food"]:
