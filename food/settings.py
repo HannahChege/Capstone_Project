@@ -121,9 +121,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# LEAFLET_CONFIG= {
-#     'DEFAULT_ZOOM': 12
-# }
+LEAFLET_CONFIG= {
+    'DEFAULT_ZOOM': 12
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
