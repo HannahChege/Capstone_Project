@@ -1,18 +1,64 @@
 {% extends 'base.html'%}
 {% load bootstrap3 %}
 {% load bootstrap4 %}
+{% load leaflet_tags %}
 {% load static%}
 
 {% block content %}
+<html>
 
-{% for photo_item in images %}
-<div class="row">
-    <div class="col-md-6">
-      <img src="{{photo_item.image.url}}"   style="width:300px; height:265px;" >
-    </div>   
+</html>
+<div class=" container cusine d-flex flex-wrap">
+{% for food in foods %}
+<div class="m-1 mt-2">
+    <div class="col-md-3 col-sm-6 col-lg-4">
+      <img src="{{food.image.url}}"   style="width:300px; height:265px;  style="width: 200%" class="image" data-toggle="modal" data-target="#exampleModal{{food.id}}"class="img-responsive" alt="Image" style="max-width:300px;" >
+    </div>
+
 </div>  
-  {% endfor %}  
+{% endfor %}  
 
+<!--  modal -->
+{% for food in foods %}
+<div class="modal fade"  id="exampleModal{{food.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">{{food.name }}</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+     </div>
+    <div class="modal-body">
+        <p style="font-size:40px">{{food.name}}</p>
+      <img src="{{food.image.url}}" style="width: 100%" class="image" data-toggle="modal" data-target="#exampleModal{{food.id}}"class="img-responsive" alt="Image" style="max-width:300px;">
+      <script type="text/javascript">
+        function  {{food.un}} (map, options) {
+          console.log(map)
+          {% for rest in food.restaurant.all %}
+            L.marker([{{rest.point.coords|first}}, {{rest.point.coords|last}}]).addTo(map);
+          {% endfor %}
+        }
+      </script>
+    {% leaflet_map food.un callback=food.un %}
+    <p>Food Name:{{food.name}}</p>
+    <p>Price:{{food.price}}</p>
+    <p>Location:{{food.location}}</p>
+
+    </div>
+    <div class="modal-footer">
+        <p>Location:{{food.location}}</p>
+
+    </div>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+  </div>
+</div>
+</div>
+</div>
+
+{% endfor %}
+{% endblock %}
 <style> 
 
 .img{
@@ -30,7 +76,7 @@ overflow: hidden;
 transition: .5s ease;
 transform: translateY(-7px);
         }
-      </style>
-{% endblock %}
+</style>
+
 
 
