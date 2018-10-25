@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Image
+from .models import food,Restratuant
 # Register your models here.
-admin.site.register(Image)
+admin.site.register(food)
+admin.site.register(Restratuant)
