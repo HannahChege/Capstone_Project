@@ -23,22 +23,22 @@ class Image(models.Model):
         an_image = Image.objects.get(id=id)
         return an_image    
 
-# class Restratuant(models.Model):
-#     name = models.CharField(max_length =30)
-#     location= models.CharField(max_length =30)
-#     food = models.ManyToManyField(food)
+class Restratuant(models.Model):
+    name = models.CharField(max_length =30)
+    location= models.CharField(max_length =30)
+    food = models.ManyToManyField(food)
 
    
-#     def __str__(self):
-#         return self.name
-#     def save_restratuant(self):
-#         self.save()  
+    def __str__(self):
+        return self.name
+    def save_restratuant(self):
+        self.save()  
 
-#     def delete_restratuant(self):
-#         self.delete()  
+    def delete_restratuant(self):
+        self.delete()  
 
-#     @classmethod
-#     def update_restratuant(cls,update):
-#         pass
+    @classmethod
+    def update_restratuant(cls,update):
+        pass
      
     

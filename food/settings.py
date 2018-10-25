@@ -25,7 +25,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 if config('MODE')=="dev":
    DATABASES = {
        'default': {
-           'ENGINE': 'django.db.backends.postgresql_psycopg2',
+           'ENGINE': 'django.contrib.gis.db.backends.postgis',
            'NAME': config('DB_NAME'),
            'USER': config('DB_USER'),
            'PASSWORD': config('DB_PASSWORD'),
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'foody.apps.FoodyConfig',
     'bootstrap3',
     'bootstrap4',
+    'django.contrib.gis',
 ]
 
 MIDDLEWARE = [
