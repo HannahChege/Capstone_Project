@@ -1,6 +1,8 @@
 {% load bootstrap3 %}
 {% load bootstrap4 %}
 {% load static%}
+{% load leaflet_tags %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +14,8 @@
   {% block styles %}
   {% bootstrap_css %}
   <link rel="stylesheet" href="{% static 'css/food.css' %}">
- 
+  {% leaflet_js %}
+    {% leaflet_css %}
 {% endblock %}
 
 </head>
