@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 confusable-homoglyphs==3.2.0
-=======
->>>>>>> 1833c1db3c4720972c97b9382456da9b2298d282
 dj-database-url==0.5.0
 Django==1.11
 django-bootstrap3==11.0.0
 django-bootstrap4==0.0.7
-<<<<<<< HEAD
 django-geojson==2.11.0
 django-heroku==0.3.1
 django-leaflet==0.24.0
@@ -19,11 +15,4 @@ psycopg2-binary==2.7.5
 python-decouple==3.1
 pytz==2018.5
 six==1.11.0
-=======
-django-heroku==0.3.1
-gunicorn==19.9.0
-psycopg2==2.7.5
-python-decouple==3.1
-pytz==2018.5
->>>>>>> 1833c1db3c4720972c97b9382456da9b2298d282
 whitenoise==4.1
