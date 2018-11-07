@@ -34,3 +34,184 @@
   margin-left: 5em;
   margin-top: -1em;
 }
+/* h1{
+    color:aqua;
+}
+
+
+  h1{
+    text-align: center;
+    text-color: white;
+  }
+  h2{
+    font-color:orange;
+    font-size: 20;
+    font-style: italic;
+  }
+  .img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  #b{
+    background-color:white;
+  }
+  .happyTime{
+    height: ;
+  
+  }
+  .happyhour{
+  
+    height: ;
+    width: ;
+  }
+  
+  #imgtext{
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    font-size: 30px;
+    color: white;
+  
+  }
+  #text1{
+    background-color: gray;
+    font-style: italic;
+  }
+  #text2{
+    background-color: ;
+  
+  }
+  .leo{
+    background-color: gray;
+  }
+  .Hour{
+    background-color: #f15a29;
+  }
+  
+  .row1{
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #fastfood{
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 0 10px 10px #F2F2F2;
+    border-width: 20px;
+  }
+  #drinks{
+    border-style: solid;
+    border-color: white;
+    border-width: 20px;
+    box-shadow: 0 0 10px 10px #F2F2F2;
+  }
+  #foodsBg{
+    height: 500px;
+    width: 100%;
+    margin-top: 3em;
+  }
+  
+  #chicken{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    margin-top: -30%;
+  
+  }
+  .col-md-4{
+    background-color: white;
+  
+  }
+  
+  .container 2{
+    background-color: white;
+  }
+  #form{
+    background-image: url("../img/backgrounds/subscribe.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+  #customer{
+    border-style: solid;
+    border-color: white;
+    border-width: 20px;
+    box-shadow: 0 0 10px 10px #F2F2F2;
+    margin-top: -10%;
+    margin-bottom: 3em;
+  }
+  h1{
+    font-size: 30;
+  }
+  #email{
+    margin-left: 15em;
+  
+  }
+  #input{
+    opacity: 0.5;
+    width: 300px;
+  }
+  .btn-email{
+    background-color: orange;
+    width: 120px;
+  }
+  #footer{
+    background-color:#f15a29;
+    height: 300px;
+    color: white;
+    margin-top: -10%;
+    font-family: serif;
+  
+  }
+  
+  .img2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 3em;
+  }
+  #menu{
+    margin-left: 5em;
+    margin-top: -1em;
+  }
+  .footers{
+    margin-left: 50%;
+  }
+  .nav{
+    background-color: lightgrey;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  .nav li{
+    float: left;
+    color: black;
+    text-align: left;
+    padding: 10px 90px;
+    text-decoration: black;
+    font-size: 18px;
+    height: 70%;
+  }
+  .nav li:hover{
+    background-color: white;
+    color: red;
+  }
+  .nav li.active{
+    background-color: white;
+    color: red;
+  }
+  #food{
+     background-image: url("../img/backgrounds/foodsBg.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
+     height: 550px;
+  
+  }
+  .cnt{
+    background-color:white;
+  >>>>>>> fd1961d81069709c34fbebccc3c2332e0efa8727
+  }
+   */
