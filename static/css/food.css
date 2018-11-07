@@ -1,0 +1,36 @@
+
+#chicken{
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  margin-top: -30%;
+
+}  
+.col-md-4{
+  background-color: white;
+
+}
+
+.container 2{
+  background-color: white;
+}
+#form{
+  background-image: url("../img/backgrounds/subscribe.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+#customer{
+  border-style: solid;
+  border-color: white;
+  border-width: 20px;
+  box-shadow: 0 0 10px 10px #F2F2F2;
+  margin-top: -10%;
+  margin-bottom: 3em;
+}
+
+#menu{
+  margin-left: 5em;
+  margin-top: -1em;
+}

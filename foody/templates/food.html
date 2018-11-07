@@ -1,0 +1,108 @@
+{% extends 'base.html'%}
+{% load bootstrap3 %}
+{% load bootstrap4 %}
+{% load leaflet_tags %}
+{% load static%}
+
+{% block styles%}
+{{block.super}}
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One%7CConcert+One%7COverlock" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/food.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container" style="color:black; margin-top: 60px;">
+  <h4 style="text-align:center ;font-size:60px;font-family: 'Kirang Haerang', cursive;">How it Works</h4>
+    <div class="row" id="row2" >
+      <div class="col-md-4">
+        <img src="https://food.jumia.co.ke/images/how-it-works-1.svg">
+<h4 style="font-family: 'Kirang Haerang', cursive;">Select your image</h4>
+<p>Browse restaurant</p>
+      </div>
+      <div class="col-md-4">
+<img src="https://food.jumia.co.ke/images/how-it-works-2.svg " >
+<h4 style="font-family: 'Kirang Haerang', cursive;">Find restaurant</h4>
+      </div>
+      <div class="col-md-4">
+<img src="https://food.jumia.co.ke/images/how-it-works-3.svg"> 
+<h4 style="font-family: 'Kirang Haerang', cursive;"> Find your Location</h4>
+      </div>
+    </div>
+</div>
+<h4 style="text-align:center ;font-size:60px;font-family: 'Kirang Haerang', cursive;">Popular Restaurants</h4>
+<div class=" container cusine d-flex flex-wrap" style="margin-top:50px">
+{% for food in foods %}
+<div class="m-1 mt-2">
+    <div class="col-md-3 col-sm-6 col-lg-4">
+      <img src="{{food.image.url}}"   class="imagee" style="width:300px; height:265px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;overflow: hidden;
+    transition: .5s ease;
+    transform: translateY(-7px);" data-toggle="modal" data-target="#exampleModal{{food.id}}"class="img-responsive" alt="Image" style="max-width:300px;" >
+    </div>
+
+</div>  
+{% endfor %}  
+
+<!--  modal -->
+{% for food in foods %}
+<div class="modal fade"  id="exampleModal{{food.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 style="text-align:center ;font-size:60px;font-family: 'Kirang Haerang', cursive;">Yummy Deals</h4>  <img src="static/image/food2.png" >
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+     </div>
+    <div class="modal-body">
+        <p style="font-size:" style="text-align:center ;font-size:60px;font-family: 'Kirang Haerang', cursive;">{{food.name}}</p>
+      <img src="{{food.image.url}}" style="width: 100%" class="image" data-toggle="modal" data-target="#exampleModal{{food.id}}"class="img-responsive" alt="Image" style="max-width:500px;">
+      
+      <script type="text/javascript">
+        function  {{food.un}} (map, options) {
+          console.log(map)
+          {% for rest in food.restaurant.all %}
+            L.marker([{{rest.point.coords|first}}, {{rest.point.coords|last}}]).addTo(map);
+          {% endfor %}
+        }
+      </script>
+    {% leaflet_map food.un callback=food.un %}
+    <p>Food Name:{{food.name}}</p>
+    <p>Price:{{food.price}}</p>
+    <p>Location:{{food.location}}</p>
+
+    </div>
+    <div class="modal-footer">
+        <p>Location:{{food.location}}</p>
+    </div>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+  </div>
+</div>
+</div>
+</div>
+{% endfor %}
+      <div class="footers">
+      <div class="row">
+        <div class="col-md-4">
+      <img src="static/img/icons8-facebook-50.png">
+    </div>
+    <div class="col-md-4">
+      <img src="static/img/icons8-instagram-64.png">
+    </div>
+    <div class="col-md-4">
+      <img src="static/img/icons8-twitter-50.png">
+    </div>
+    </div>
+      <p style="text-align:center; font-size:60px;font-family: 'Kirang Haerang', cursive;"> YUMMY DEALS</p>
+      <p style="text-align:center; font-size:60px;font-family: 'Kirang Haerang', cursive;"> 2018</p>
+
+    </div>
+
+{% endblock %}
+
+
+
+

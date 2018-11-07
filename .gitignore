@@ -1,0 +1,6 @@
+.env
+virtual/
+.vscode
+food/__pycache__/
+foody/__pycache__/
+foody/migrations/
